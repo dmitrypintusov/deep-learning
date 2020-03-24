@@ -141,7 +141,7 @@ loss, accuracy = model.evaluate_generator(validation_generator, total_validate /
 print("Test: accuracy = %f  ;  loss = %f " % (accuracy, loss))
 
 
-def plot_model_history(model_history, acc='acc', val_acc='val_acc'):
+def plot_model_history(model_history, acc='accuracy', val_acc='val_accuracy'):
     fig, axs = plt.subplots(1, 2, figsize=(15, 5))
     axs[0].plot(range(1, len(model_history.history[acc]) + 1), model_history.history[acc])
     axs[0].plot(range(1, len(model_history.history[val_acc]) + 1), model_history.history[val_acc])
